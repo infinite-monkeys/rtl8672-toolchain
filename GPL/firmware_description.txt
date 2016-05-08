@@ -1,0 +1,5 @@
+The included GPL codes are used by TRENDnet to provide the 
+features exist in the TEW-652BRP. TRENDnet will 
+provide available source code to the customers upon request 
+at lease 3 years from 1/11/2007. The GPL source code is 
+available for download at http://www.trendnet.com/gpl 

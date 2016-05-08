@@ -1,0 +1,43 @@
+Install & Build Process
+=======================
+Environment: 
+	1. Download Fedora Core 3 from http://fedoraproject.org/
+	2. Install Fedora Core 3 fully in your computer.
+
+Install & Build:
+	1. Unzip the toolchain package:
+		# mkdir /toolchain
+		# cp toolchain-1.3.5-0.9.28-source.tbz2 /toolchain
+		# cd /toolchain
+		# tar jxvf toolchain-1.3.5-0.9.28-source.tbz2
+	2. Build and install the toolchain:
+		# cd /toolchain/openrsdk
+		# make
+		# mkdir /opt/rtl_tools
+		# cd /toolchain
+		# mv rsdk-1.3.5-5181-EB-2.6.19-0.9.28/linux /opt/rtl_tools
+		# rm rsdk
+		# ln -s /opt/rtl_tools /toolchain/rsdk
+	3. Building the image.
+		(1). Please make sure the gcc-version is greater than 3.4.2
+			 (You can type "~#gcc -v " to ckeck the gcc-version)
+		(2). Copy the TEW-652BRP-GPL.tgz into /home/ directory
+		     use following commands.
+			# cp TEW-652BRP-GPL.tgz /home/
+			# tar -zxvf TEW-652BRP-GPL.tgz
+		(3). You will get "Matrix" directory.
+			# cd /home/Matrix	
+		(4). Into the Matrix/projects/TEW-652BRPR1 directory,and run following commands.
+			# make clean
+			# make TEW-652BRPR1
+		(5). After make successfully, you will get the image file "TEW652BRPR1_FWxxxBxxxx.bin"
+		     in "Matrix/projects/TEW-652BRPR1/image/"
+	4. Building loader image.
+		(1). Enter the project directory.
+			# cd /home/Matrix/projects/TEW-652BRPR1/
+			# make loader
+		(2). You can get loader under image directory
+			# cd image
+			# download boot.bin
+	4. Update the new firmware by web interface provided by device.
+	5. Congratulations! You got your specific image now.
