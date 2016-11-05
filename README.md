@@ -28,3 +28,5 @@ http://rtl8181.sourceforge.net/rtl8181_toolchain.php
 https://pigworlds.wordpress.com/2011/05/29/tew-652brp-v2-toolchain/
 
 http://www.trendnet.com/downloads/list_gpl.asp
+
+https://sourceforge.net/projects/rtl819x/files/
